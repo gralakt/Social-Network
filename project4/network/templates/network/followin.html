@@ -1,0 +1,34 @@
+{% extends "network/layout.html" %}
+{% load static %}
+{% block body %}
+
+
+    <div class="create-post-container">
+
+        <div class="subscribe">
+            <h1>Following</h1>
+        </div>
+
+    </div>
+
+
+
+<div id="pagination-wrapper">
+
+</div>
+
+
+
+{% include "network/posts_container.html" %}
+
+
+{% include "network/pagination-container.html" %}
+
+
+<input type='hidden' id="userID" value={{request.user.id}}>
+<input type='hidden' id="status" value={{status}}>
+
+
+<script type="text/javascript" src="{% static 'network/index.js' %}"></script>
+
+{% endblock %}

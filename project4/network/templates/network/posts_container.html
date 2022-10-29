@@ -1,0 +1,49 @@
+<div id="posts-container">
+
+    {% for post in post_list %}
+
+    <div class="post-container" id=id_{{post.id}} value={{post.likers.all}}>
+
+        {% if post.user.id == request.user.id %}
+            <div class="top">
+                <b class="userLink">{{post.user}}</b>
+                <p class="edit" id={{post.id}}>Edit</p>
+            </div>
+        {% else %}
+            <div class="top">
+                <b class="userLink">{{post.user}}</b>
+            </div>
+            <br>
+        {% endif %}
+        
+        <div id='id_{{post.id}}' value={{post.likers}}>
+            <small>{{post.created}}</small>
+            <div class="postInnerContainer">
+                <div id="id_{{post.id}}">
+                    {{post.content}}
+                </div>
+            </div>
+        </div>
+
+        <div class="like-container" id='id_{{post.id}}'>
+            {% if request.user.is_authenticated %}
+            <div id={{post.id}} value={{post.likes}} class="like" likers={{post.likers.all}}>
+                    {% for liker in post.likers.all %}
+                        {{liker.id}}
+                    {% endfor %}
+            </div>
+            {% else %}
+            <a href="{% url 'login' %}" class="like"></a>
+            {% endif %}
+            <div>
+                <input type="hidden" class="hidden" value={{post.likers.all}}>
+                <small>{{post.likes}}</small>
+            </div>
+            
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>

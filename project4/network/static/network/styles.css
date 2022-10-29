@@ -1,0 +1,285 @@
+/* Unlike heart button styling */
+.unlike{
+	position: relative;
+	width: 10px;
+	height: 10px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color: rgb(25,201,255);
+}
+.unlike:before,
+.unlike:after{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	content: '';
+	-webkit-border-radius:  50%;
+	-moz-border-radius:  50%;
+	-o-border-radius:  50%;
+	border-radius:  50%;
+	background-color: rgb(25,201,255);
+}
+.unlike:before{
+	bottom: 0px;
+	left: -5px;
+}
+.unlike:after{
+	top:  -5px;
+	right: 0px;
+}
+
+
+/* Like heart button styling */
+.like{
+	position: relative;
+	width: 10px;
+	height: 10px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color: lightgray;
+}
+.like:before,
+.like:after{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	content: '';
+	-webkit-border-radius:  50%;
+	-moz-border-radius:  50%;
+	-o-border-radius:  50%;
+	border-radius:  50%;
+	background-color: lightgray;
+}
+.like:before{
+	bottom: 0px;
+	left: -5px;
+}
+.like:after{
+	top:  -5px;
+	right: 0px;
+}
+
+
+/* Post box styling */
+.post-container{
+    margin: 5px;
+    background-color: #FFFFFF;
+    border: 1px solid rgb(209,213,219);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.post-container:hover {
+    box-shadow: 0 8px 32px 0 rgba(160, 161, 161, 0.3);
+}
+
+
+/* Follow / Unfollow button container styling */
+.butt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Follow button styling */
+#follow{
+    text-align: center;
+    margin: 0 autp;
+    position: relative;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+    background: transparent;
+    border: 2px solid white;
+    padding: 1em 4em;
+    border-radius: 50px;
+    cursor: pointer;
+    
+    font-weight: 700;
+    position: relative;
+    transition: all 300ms ease;
+}
+#follow:hover{
+    transition: all 300ms ease;
+    background: white;
+    color: rgb(25,201,255);
+}
+
+
+/* Unfollow button styling */
+#unfollow{
+    text-align: center;
+    margin: 0 autp;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    padding: 1em 4em;
+    border-radius: 50px;
+    cursor: pointer;
+    
+    font-weight: 700;
+    position: relative;
+    transition: all 300ms ease;
+    }
+#unfollow:hover{
+    transition: all 300ms ease;
+    background: white;
+    color: rgb(25,201,255);
+}
+
+
+
+/* Edit and Save buttons styling */
+.edit {
+	border: 1px solid rgb(209,213,219);
+	width: 40px;
+	text-align: center;
+	font-weight: 100;
+    border-radius: .5rem;
+}
+.edit:hover {
+    color: white;
+    background-color: rgb(25,201,255);
+}
+.submit-edit {
+    border: 1px solid rgb(209,213,219);
+    width: 40px;
+    text-align: center;
+    font-weight: 100;
+    border-radius: .5rem;
+    color: white;
+    background-color: rgb(25,201,255);
+}
+.submit-edit:hover {
+    color: black;
+    background-color: white;
+}
+
+
+/* Div that contains likes number and heart like/unlike button, styling */
+.like-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 50px;
+	align-items: center;
+	padding: 5px;
+}
+
+
+/* Div that contains username and if there is - edit/save button, styling*/
+.top{
+	display: grid;
+	grid-template-columns: 10fr 1fr;
+	margin-bottom: -20px;
+}
+
+
+/* Div that contains pagination buttons, styling */
+.pagination-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Inside profile.html user's username paragraph, styling */
+.username{
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+    color: white;
+    font-size: 80px;
+    letter-spacing: 5px;
+}
+
+
+/* Big 'blue' div inside witch are i.a. create post form, username and followers, 'following' h1 */
+.create-post-container{
+	position: relative;
+    background: rgb(25,201,255);
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Count of followers and following */
+.follow-container{
+    text-align: center;
+    color: white;
+}
+.follow-container #number_of_followers{
+	display: inline-block;
+	padding: 10px;
+}
+.follow-container #number_of_following{
+	display: inline-block;
+	padding: 10px;
+}
+
+
+/* Post a post input styling */
+.subscribe {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    color: white;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid;
+    padding: 1em 0 .8em;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: inherit;
+    outline: none;
+}
+
+
+/* Post a post button styling */
+.but {    
+    color: white;
+    all: unset;
+    margin-top: 20px;
+    margin-bottom: 6pxx;
+    background: transparent;
+    border: 2px solid white;
+    padding: 1em 4em;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    position: relative;
+    transition: all 300ms ease;
+}
+.but:hover{
+    transition: all 300ms ease;
+    background: white;
+    color: rgb(25,201,255);
+}

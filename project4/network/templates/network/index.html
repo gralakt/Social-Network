@@ -1,0 +1,35 @@
+{% extends "network/layout.html" %}
+{% load static %}
+{% block body %}
+
+
+<div class="create-post-container">
+    {% if request.user.is_authenticated %}
+
+    <form class="subscribe" action="" method="post">
+        {% csrf_token %}
+
+        <div class="subscribe">
+            <input autofocus  type="text" name="new_content" placeholder="What's on your mind today?">
+        </div>
+        <input class="but" type="submit" value="Post">
+    </form>
+
+    {% else %}
+
+    <form class="subscribe" action="/login" method="get">
+        <input class="but" type="submit" value="Login to Post and Unlock More Features 🔓">
+    </form>
+
+    {% endif %}
+</div>
+
+{% include "network/posts_container.html" %}
+
+{% include "network/pagination-container.html" %}
+
+<input type='hidden' id="userID" value={{request.user.id}}>
+
+<script type="text/javascript" src="{% static 'network/index.js' %}"></script>
+
+{% endblock %}

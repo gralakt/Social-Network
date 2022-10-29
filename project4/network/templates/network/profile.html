@@ -1,0 +1,30 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+<script type="text/javascript" src="{% static 'network/profile.js' %}"></script>
+<script type="text/javascript" src="{% static 'network/index.js' %}"></script>
+
+
+<div class="create-post-container">
+<h1 class="username">{{user.username}}</h1>
+
+    <div class="follow-container">
+        <h4 id="number_of_followers">{{user.id}}</h4>
+        <h4 id="number_of_following"></h4>
+    </div>
+    <div class="butt">
+        <button id="unfollow">Unfollow</button>
+        <button id="follow">Follow</button>
+    </div>
+</div>
+
+{% include "network/posts_container.html" %}
+
+{% include "network/pagination-container.html" %}
+
+<input type='hidden' id="userID" value={{request.user.id}}>
+<hidden class="userID" id={{request.user.id}}>
+<hiden class="followers" id="{{user.id}}">
+
+{% endblock %}

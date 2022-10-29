@@ -1,9 +1,9 @@
 # Social-Network
 Written in Django. 
 This project presents an interactive social network web app.
-  `publish &amp; like posts you enjoy
-  `follow other users 
-  `and much more... 
+  - publish &amp; like posts you enjoy
+  - follow other users 
+  - and much more... 
 Everything via API.
 
 
